@@ -14,8 +14,8 @@ The initial application contained a **CWE-89: SQL Injection** vulnerability. Thi
 
 ### 1. Build & Deployment
 I successfully containerized the application to ensure it runs in an isolated environment.
-![Docker Build](images/01-docker-build-success)
-![Web Interface](images/03-web-interface-welcome)
+![Docker Build](images/01-docker-build-success.png)
+![Web Interface](images/03-web-interface-welcome.png)
 
 ### 2. Security Analysis (The Vulnerability)
 Running **Bandit** (Static Application Security Testing) revealed a "Medium/High" severity SQL Injection risk.
