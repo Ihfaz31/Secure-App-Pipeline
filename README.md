@@ -19,12 +19,12 @@ I successfully containerized the application to ensure it runs in an isolated en
 
 ### 2. Security Analysis (The Vulnerability)
 Running **Bandit** (Static Application Security Testing) revealed a "Medium/High" severity SQL Injection risk.
-![Bandit Scan Results](images/05-bandit-scan-vulnerability)
+![Bandit Scan Results](images/05-bandit-scan-vulnerability.png.png)
 
 ### 3. Verification & Fix
 After refactoring the code to use secure query methods, the security scan passed with **0 issues**.
-![Clean Scan](images/06-bandit-scan-clean-pass)
-![Injection Blocked](images/07-injection-blocked-proof)
+![Clean Scan](images/06-bandit-scan-clean-pass.png.png)
+![Injection Blocked](images/07-injection-blocked-proof.png.png)
 
 ---
 
