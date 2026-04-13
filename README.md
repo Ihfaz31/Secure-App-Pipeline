@@ -10,7 +10,26 @@ The initial application contained a **CWE-89: SQL Injection** vulnerability. Thi
 2. **Automated Scanning:** Ran `Bandit` against the source code, which identified a "Medium/High" severity SQL injection risk.
 3. **Remediation:** Refactored the code to use **Parameterized Queries**, separating user input from logic.
 4. **Verification:** Re-ran the security scan to confirm a "Clean" status (0 issues).
-## Evidence
-- **Security Scan Failure:** (Insert `04-sast-scan-results.png` here)
-- **Security Scan Success:** (Insert `05-remediation-scan-pass.png` here)
-- **Blocked Injection Proof:** (Insert `06-injection-blocked.png` here)
+## 📊 Technical Evidence
+
+### 1. Build & Deployment
+I successfully containerized the application to ensure it runs in an isolated environment.
+![Docker Build](images/01-docker-build-success)
+![Web Interface](images/03-web-interface-welcome)
+
+### 2. Security Analysis (The Vulnerability)
+Running **Bandit** (Static Application Security Testing) revealed a "Medium/High" severity SQL Injection risk.
+![Bandit Scan Results](images/05-bandit-scan-vulnerability.png)
+
+### 3. Verification & Fix
+After refactoring the code to use secure query methods, the security scan passed with **0 issues**.
+![Clean Scan](images/06-bandit-scan-clean-pass.png)
+![Injection Blocked](images/07-injection-blocked-proof.png)
+
+---
+
+## 🛠️ Tools Used
+* **Python/Flask** (Backend)
+* **Docker** (Containerization)
+* **Bandit** (Security Scanning)
+* **Git/GitHub** (Version Control)
